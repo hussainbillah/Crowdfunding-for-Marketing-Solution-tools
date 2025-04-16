@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support the Future of All-in-One Digital Marketing Tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a0ca3;
+            --secondary: #f72585;
+            --accent: #4cc9f0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --success: #38b000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #d91a6a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .mb-5 {
+            margin-bottom: 3rem;
+        }
+        
+        /* Header/Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+        }
+        
+        /* Funding Progress */
+        .funding-section {
+            background-color: var(--light);
+        }
+        
+        .progress-container {
+            background: var(--light-gray);
+            border-radius: 50px;
+            height: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            height: 100%;
+            border-radius: 50px;
+            width: 37.5%;
+            position: relative;
+            transition: width 1s ease;
+        }
+        
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                            rgba(255,255,255,0.1) 0%, 
+                            rgba(255,255,255,0.3) 50%, 
+                            rgba(255,255,255,0.1) 100%);
+            animation: progressShine 2s infinite;
+        }
+        
+        .funding-stats {
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* About Sections */
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Benefits */
+        .benefits-section {
+            background-color: var(--light);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        /* Rewards */
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .reward-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--light-gray);
+            position: relative;
+        }
+        
+        .reward-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .reward-header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .reward-body {
+            padding: 30px;
+        }
+        
+        .reward-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .reward-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .reward-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .reward-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+        
+        /* FAQ */
+        .faq-section {
+            background-color: var(--light);
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .faq-question::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes progressShine {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(100%);
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* নতুন ব্যাজ স্টাইল */
+        .reward-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+            z-index: 2;
+        }
+
+        .badge-popular {
+            background: linear-gradient(135deg, #f72585, #b5179e);
+            animation: pulse 2s infinite;
+        }
+
+        .badge-freelancer {
+            background: linear-gradient(135deg, #4cc9f0, #4895ef);
+        }
+
+        .badge-enterprise {
+            background: linear-gradient(135deg, #f8961e, #f3722c);
+        }
+
+        .badge-agency {
+            background: linear-gradient(135deg, #43aa8b, #90be6d);
+        }
+
+        .sold-status {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .sold-status i {
+            color: var(--success);
+            margin-right: 5px;
+        }
+
+        .reward-header {
+            position: relative;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Review stars */
+        .review-stars {
+            color: #ffc107;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-section {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Invest in the Future of Marketing Technology</h1>
+                <p>Empowering digital growth through innovation, automation, and smart marketing tools.</p>
+                <div class="hero-buttons">
+                    <a href="#donate" class="btn btn-primary">Donate Now</a>
+                    <a href="https://hussainbillah.github.io/Marketing-Tools/" target="_blank" class="btn btn-secondary">Visit Our Prototype Website</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Funding Progress -->
+    <section class="funding-section">
+        <div class="container text-center">
+            <h2>Our Funding Goal</h2>
+            <p>Help us reach our $200,000 goal to bring this platform to life</p>
+            
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            
+            <div class="funding-stats">
+                <div class="amount-raised">$27,000 raised</div>
+                <div class="goal-amount">$200,000 goal</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Project -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-text">
+                <h2>About the Project</h2>
+                <p>We are developing a next-generation All-in-One Digital Marketing Tool designed to streamline every step of your online marketing journey. Whether you're a freelancer, business owner, or agency—this platform provides tools for SEO, content generation, email & SMS marketing, analytics, social media, competitor research, and automation.</p>
+                <p>Built with simplicity, speed, and scale in mind—our platform uses AI and smart automation to save time, reduce costs, and maximize marketing ROI.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Marketing Dashboard">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Founder -->
+    <section class="about-section" style="background-color: var(--light);">
+        <div class="container">
+            <div class="about-image">
+                <img src="https://media-hosting.imagekit.io/9f65441b4f074d95/FB_IMG_17232258881646165-removebg-preview.png?Expires=1839372134&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MBFwAg6Q-x3rsszyscvuxE60lCy5RDftCdDooc8qPgkxEGWJiACbd866pzu3M~T6ukUHVWkBfZuBN5Q6d5m4toXgkUouWnsDOhnrl7lh01W1jk5Fg4OJIfUKQjRiv4hhsSwho-FpYiRlxpg~rZ-c03M4eTCyMxEJpjpSRWBwNGT8dCGTvVIz0tg5GkgQfjeosTWpruxxktANVhOhhF8R-PIC2M-Xax7f-ts6H0KTSzNlt8by6UfoA3Rrw4z3ichgh8Uo5phf~nYANe3f~ZJ8DB128b5JqJhAjjXdAks48UnaVMN34bRMGsBiqTxM4CcpqqSZrAZA86uFumw6I2U~kg__" alt="Hussain Billah">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>My name is Hussain Billah, the founder of this initiative and CEO of Sonicium Ltd. With 8 years of experience in digital marketing, freelancing, and tech innovation, I have trained hundreds of learners and built several successful digital ventures.</p>
+                <p>Now, I am combining my knowledge to build a tool that will transform how we approach online marketing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Project Benefits</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>One Dashboard for All</h3>
+                    <p>Manage SEO, email, SMS, and analytics in one place with a unified interface.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Automation</h3>
+                    <p>Generate content, optimize campaigns, and track performance with AI assistance.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Save Time & Cost</h3>
+                    <p>No need for 5–6 separate tools, everything is integrated and streamlined.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Perfect for All Users</h3>
+                    <p>Easy UI for beginners, powerful features for experts—all designed for smart results.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Real Impact</h3>
+                    <p>Designed to support small businesses, freelancers, and global entrepreneurs.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data-Driven Results</h3>
+                    <p>Make informed decisions with real-time analytics and performance insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rewards -->
+    <section id="donate">
+        <div class="container">
+            <h2 class="text-center mb-5">Donation Tiers & Rewards</h2>
+            
+            <div class="rewards-grid">
+                <!-- Tier 1 - $20 -->
+                <div class="reward-card">
+                    <div class="reward-header">
+                        <h3>Supporter</h3>
+                        
+                    </div>
+                    <div class="reward-body">
+                        <div class="reward-price">$20</div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(24)</span>
+                        </div>
+                        <ul class="reward-features">
+                            <li>1 Month Platform Access</li>
+                            <li>Thank You Note</li>
+                            <li>Early Access</li>
+                        </ul>
+                        <div class="sold-status">
+                            <i class="fas fa-check-circle"></i> 45+ sold
+                        </div>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=JK4H5QTFHT2EJ" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Donate Now</a>
+                    </div>
+                </div>
+                
+                <!-- Tier 2 - $50 -->
+                <div class="reward-card">
+                    <div class="reward-header">
+                        <h3>Early Adopter</h3>
+                        <span class="reward-badge badge-freelancer">Freelancer's Pick</span>
+                    </div>
+                    <div class="reward-body">
+                        <div class="reward-price">$50</div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(32)</span>
+                        </div>
+                        <ul class="reward-features">
+                            <li>3 Months Platform Access</li>
+                            <li>Basic Templates Pack</li>
+                            <li>Early Access</li>
+                        </ul>
+                        <div class="sold-status">
+                            <i class="fas fa-check-circle"></i> 68+ sold
+                        </div>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=JK4H5QTFHT2EJ" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Donate Now</a>
+                    </div>
+                </div>
+                
+                <!-- Tier 3 - $100 -->
+                <div class="reward-card">
+                    <div class="reward-header">
+                        <h3>Contributor</h3>
+                        <span class="reward-badge badge-popular">Most Popular</span>
+                    </div>
+                    <div class="reward-body">
+                        <div class="reward-price">$100</div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(47)</span>
+                        </div>
+                        <ul class="reward-features">
+                            <li>6 Months Platform Access</li>
+                            <li>Premium Templates Pack</li>
+                            <li>Early Access</li>
+                        </ul>
+                        <div class="sold-status">
+                            <i class="fas fa-check-circle"></i> 32+ sold
+                        </div>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=JK4H5QTFHT2EJ" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Donate Now</a>
+                    </div>
+                </div>
+                
+                <!-- Tier 4 - $200 -->
+                <div class="reward-card">
+                    <div class="reward-header">
+                        <h3>Premium Member</h3>
+                        <span class="reward-badge badge-enterprise">Agency 1 Year</span>
+                    </div>
+                    <div class="reward-body">
+                        <div class="reward-price">$200</div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(9)</span>
+                        </div>
+                        <ul class="reward-features">
+                            <li>1 Year Platform Access</li>
+                            <li>Exclusive Webinar Invite</li>
+                            <li>All Template Packs</li>
+                        </ul>
+                        <div class="sold-status">
+                            <i class="fas fa-check-circle"></i> 12+ sold
+                        </div>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=JK4H5QTFHT2EJ" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Donate Now</a>
+                    </div>
+                </div>
+                
+                <!-- Tier 5 - $500 -->
+                <div class="reward-card">
+                    <div class="reward-header">
+                        <h3>VIP Member</h3>
+                        <span class="reward-badge badge-agency">Agency Choice</span>
+                        
+                    </div>
+                    <div class="reward-body">
+                        <div class="reward-price">$500</div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(18)</span>
+                        </div>
+                        <ul class="reward-features">
+                            <li>Lifetime Platform Access</li>
+                            <li>Contributor Badge</li>
+                            <li>All Premium Features</li>
+                        </ul>
+                        <div class="sold-status">
+                            <i class="fas fa-check-circle"></i> 25+ sold
+                        </div>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=JK4H5QTFHT2EJ" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Donate Now</a>
+                    </div>
+                </div>
+                
+                <!-- Tier 6 - $1000 -->
+                <div class="reward-card">
+                    <div class="reward-header">
+                        <h3>Investor</h3>
+                        <span class="reward-badge badge-enterprise">Enterprise</span>
+                    </div>
+                    <div class="reward-body">
+                        <div class="reward-price">$1000+</div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(12)</span>
+                        </div>
+                        <ul class="reward-features">
+                            <li>Lifetime Platinum Access</li>
+                            <li>Listed as Investor</li>
+                            <li>Priority Support</li>
+                            <li>All Future Products</li>
+                        </ul>
+                        <div class="sold-status">
+                            <i class="fas fa-check-circle"></i> 15+ sold
+                        </div>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=JK4H5QTFHT2EJ" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What will my donation be used for?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your contribution will go towards development, server costs, marketing, and improving features for a global user base. We're committed to transparency and will provide regular updates on how funds are being used.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Will I get access to the platform?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Every supporter receives platform access based on their donation tier. You'll receive login credentials and setup instructions once the platform launches or when your access period begins.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is this platform already functional?
+                    </div>
+                    <div class="faq-answer">
+                        <p>We are in the final stages of development. With your support, we can launch the full version much faster. Some modules are already working in beta, and we're continuously improving the platform based on tester feedback.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I cancel or change my donation?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Donations are final, but we will ensure you receive value equal or more than your contribution. If you have any concerns about your donation tier, please contact us and we'll do our best to accommodate your needs.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        When will the platform launch?
+                    </div>
+                    <div class="faq-answer">
+                        <p>We're targeting a full launch within 6 months of reaching our funding goal. Early supporters will get access to beta versions as we progress through development milestones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 class="mb-4">Ready to Transform Digital Marketing?</h2>
+            <p class="mb-5" style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Join us in building the future of marketing tools. Your support makes a real difference.</p>
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <a href="#donate" class="btn btn-secondary">Donate Now</a>
+                <a href="https://hussainbillah.github.io/Marketing-Tools/" target="_blank" class="btn btn-outline">Visit Prototype</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone-alt"></i> WhatsApp: +8801919391942</li>
+                        <li><i class="fas fa-envelope"></i> Email: ceo@sonicium.ltd</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#donate">Donation Tiers</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="https://hussainbillah.github.io/Marketing-Tools/" target="_blank">Prototype Website</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Made with <i class="fas fa-heart" style="color: var(--secondary);"></i> by Sonicium Ltd</p>
+                <p>All rights reserved © 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.benefit-card, .reward-card, .faq-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.benefit-card, .reward-card, .faq-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        // Run once on load
+        animateOnScroll();
+        
+        // Run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // র্যান্ডম রিভিউ স্টার জেনারেটর
+        document.addEventListener('DOMContentLoaded', function() {
+            const rewardCards = document.querySelectorAll('.reward-card');
+            
+            rewardCards.forEach(card => {
+                // র্যান্ডম রিভিউ সংখ্যা (10-50 এর মধ্যে)
+                const reviewCount = Math.floor(Math.random() * 41) + 10;
+                const reviewCountElement = card.querySelector('.review-stars span');
+                if (reviewCountElement) {
+                    reviewCountElement.textContent = `(${reviewCount})`;
+                }
+                
+                // র্যান্ডম সোল্ড সংখ্যা (10-100 এর মধ্যে)
+                const soldCount = Math.floor(Math.random() * 91) + 10;
+                const soldElement = card.querySelector('.sold-status');
+                if (soldElement) {
+                    soldElement.innerHTML = `<i class="fas fa-check-circle"></i> ${soldCount}+ sold`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
